@@ -63,14 +63,14 @@ header p {
   height: 85vh;
 }
 
-#hero {
+#home {
   position: relative;
   width: 100%;
   background: url("./../img/background-01-1920x900.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   color: #fff;
 }
@@ -85,14 +85,19 @@ header p {
   background-color: rgba(80, 119, 183, 0.5);
 }
 
-header #indicators {
-  z-index: 5;
-  top: 125%;
-}
-
 .navigation {
   width: 100%;
   padding-top: 30px;
+}
+
+#header .logo {
+  width: 250px;
+  height: fit-content;
+}
+
+#hero {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .form-bg {
@@ -101,6 +106,10 @@ header #indicators {
   padding: 30px;
   width: 350px;
   margin: 0 auto;
+}
+
+#hero .form-bg {
+  float: right;
 }
 
 .form-bg h4 {
@@ -113,9 +122,14 @@ header #indicators {
   border-radius: 30px;
   padding: 15px 30px;
   background-color: #f57e57;
+  text-decoration: none;
   color: #fff;
   text-transform: uppercase;
-  transition: all 0.1s ease;
+  transition: all 0.05s ease;
+}
+
+.btn-custom:focus {
+  outline: none;
 }
 
 .btn-custom:hover {
@@ -288,17 +302,16 @@ header #indicators {
   margin: 50px 0;
 }
 
-#schedule .fill-div {
+#schedule .heading {
   background-color: #1a8fd3;
-  fill: #1a8fd3;
   height: 50px;
   text-align: center;
 }
 
 #schedule .schedule-info {
-  margin: auto;
+  margin-left: 10px;
   margin-top: 30px;
-  width: 65%;
+  margin-bottom: 30px;
   color: #333;
 }
 
@@ -317,20 +330,19 @@ header #indicators {
   right: 50px;
   z-index: 1000;
   text-decoration: none;
-  border-radius: 100%;
   background-color: #f57e57;
   color: #fff;
   box-shadow: 1px 3px 7px #333;
 }
 
 .scrollTop-btn:hover {
+  text-decoration: none;
   background-color: #1a8fd3;
 }
 
-footer .fill-div {
+footer {
   background-color: #1a8fd3;
-  fill: #1a8fd3;
-  height: 250px;
+  min-height: 150px;
   width: 100%;
 }
 
@@ -361,9 +373,13 @@ footer a:hover {
   color: #fff;
 }
 
-footer i.fa-stack-2x {
+footer .fa-stack-2x {
   color: #fff;
   transition: all 0.3s ease;
+}
+
+footer a:hover .fa-stack-2x {
+  color: #f57e57;
 }
 
 @media only screen and(max-width: 1200px) {
